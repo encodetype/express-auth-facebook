@@ -21,5 +21,23 @@ pipeline {
                 sh 'npm run test'
             }
         }
+
+        stage('build'){
+            steps {
+                sh 'echo fake_build'
+            }
+        }
+
+        stage('deploy'){
+            steps {
+                sh 'echo fake_deploy'
+            }
+        }
+
+        stage('done'){
+            steps {
+                sh 'echo fake_done'
+            }
+        }
     }
 }
