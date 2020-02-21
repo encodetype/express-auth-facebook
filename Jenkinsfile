@@ -1,5 +1,8 @@
 pipeline {
     agent { docker { image 'node:10.0' } }
+    environment {
+        HOME = '.'
+    }
     stages {
         stage('check') {
             steps {
